@@ -303,6 +303,9 @@ library(inequalityQuantile)</code></pre>
 <div id="parisian-iris-data-bel-air-5" class="section level1">
 <h1>Parisian iris data : Bel Air 5</h1>
 <p>The Institut National de la Statistique et des Études Économiques (INSEE) provides income data at a very narrow scale named iris (<a href="https://www.insee.fr/fr/statistiques/3288151" class="uri">https://www.insee.fr/fr/statistiques/3288151</a>). The deciles and quartiles of income in these areas are available. The income ranges are determined from the quantiles. The aim is to model a Lorenz curve and inequality measures from these quantiles.</p>
+<pre class="r"><code>data(&quot;tabulated_income&quot;)
+
+tabulated_BelAir5 = tabulated_income %&gt;% filter(iris== &quot;Bel Air 5&quot;)</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -411,7 +414,7 @@ library(inequalityQuantile)</code></pre>
                         bound_max = tabulated_BelAir5$bound_max,
                         nb = tabulated_BelAir5$prop_population,
                         method = &quot;CondExp&quot;)</code></pre>
-<pre><code>## Time difference of 0.1116989 secs
+<pre><code>## Time difference of 0.09674001 secs
 ## for GB2 fit across 1 distributions 
 ## </code></pre>
 <table>
